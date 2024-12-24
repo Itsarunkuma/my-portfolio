@@ -4,7 +4,7 @@ import { headerData } from "./common/Helper";
 const Header = () => {
   return (
     <div>
-      <div className="container flex justify-between mx-auto py-4 h-[100px] items-center">
+      <div className="container 2xl:max-w-[1140px] flex justify-between mx-auto py-4 h-[100px] items-center px-4">
         <a href=""> LOGO</a>
         <ul className="flex gap-5">
           {headerData.map((obj, i) => (

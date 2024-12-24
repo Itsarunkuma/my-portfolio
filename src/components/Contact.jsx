@@ -1,29 +1,86 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Github, Insta, LinkedIn } from "./common/Icons";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+emailjs.init("Favu_M3WNoYx1DWsg");
 const Contact = () => {
+  const initialState = {
+    name: "",
+    email: "",
+    message: "",
+  };
+  const [formData, setFormData] = useState(initialState);
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    if (formData.name !== "" && formData.email !== "" && formData.message) {
+      emailjs
+        .send("service_r5iqxvf", "template_30cmnz9", formData)
+        .then(toast("We will get in touch soon!"));
+      setFormData(initialState);
+    }
+  };
   return (
     <div>
-      <div className="container mx-auto py-16 mt-20">
+      <div
+        className="container 2xl:max-w-[1140px] mx-auto py-16 mt-20 px-4"
+        id="contact"
+      >
         <div className="flex">
-          <h2 className="text-[76px] uppercase ff_bebas w-full max-w-[500px]">
-            Let’s connect
-          </h2>
-          <div className="w-full">
-            <h4>
-              I am a front-end developer based in Sydney. Has Mechanical
-              Engineering background.
-            </h4>
+          <div className="w-full max-w-[500px]">
+            <h2 className="text-[76px] uppercase ff_bebas ">Let’s connect</h2>
             <p>
-              I am a front-end developer based in Sydney looking for exciting
-              opportunities. Has Mechanical Engineering background. Likes to
-              focus on accessibility when developing. Passionate and curious
-              about solving problems. Currently, I’m exploring Reactjs, Webflow
-              and a bit of Designing. While I am not programming, I enjoy
-              playing football, photography and playing Valorant. Learning more
-              to improve skill.
+              Say hello at
+              <a href="">robertgarcia@gmail.com</a>
             </p>
-            <a href="">More about me</a>
+            <p>
+              For more info, here’s my
+              <a href="">resume</a>
+            </p>
+            <div className="flex gap-4 mt-5">
+              <a href="#">
+                <LinkedIn />
+              </a>
+              <a href="#">
+                <Github />
+              </a>
+              <a href="">
+                <Insta />
+              </a>
+            </div>
           </div>
+          <form className="w-full max-w-[600px]" onSubmit={onSubmitHandler}>
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              className="w-full bg-[#1A1A1A] px-3 sm:px-4 py-3 rounded-[4px] my-3"
+              type="text"
+              placeholder="Name"
+              value={formData.name}
+            />
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              className="w-full bg-[#1A1A1A] px-3 sm:px-4 py-3 rounded-[4px] my-3"
+              type="email"
+              placeholder="Email"
+              value={formData.email}
+            />
+            <textarea
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              className="w-full bg-[#1A1A1A] px-3 sm:px-4 py-3 rounded-[4px] my-3"
+              name=""
+              id=""
+              placeholder="Message"
+              value={formData.message}
+            ></textarea>
+            <button className="bg-[#D3E97A] py-3 px-10 rounded-full text-black font-bold uppercase hover:bg-transparent hover:text-[#D3E97A] border-[1px] border-transparent hover:border-[#D3E97A] transition-all duration-300 ease-in-out mt-4">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>

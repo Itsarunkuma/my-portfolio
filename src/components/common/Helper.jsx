@@ -34,7 +34,7 @@ export const PROJECTS_LIST = [
     imgurl: img9,
     title: "",
     tech: "",
-    link: "",
+    link: "https://developer-psi-three.vercel.app/",
   },
 
   {
@@ -48,13 +48,13 @@ export const PROJECTS_LIST = [
     imgurl: img5,
     title: "",
     tech: "",
-    link: "",
+    link: "https://travling-123.web.app/",
   },
   {
     imgurl: img6,
     title: "",
     tech: "",
-    link: "",
+    link: "https://architecture-build.web.app/",
   },
   {
     imgurl: img7,

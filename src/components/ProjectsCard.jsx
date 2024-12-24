@@ -6,7 +6,7 @@ const ProjectsCard = ({ obj }) => {
       <img className="rounded-xl w-full" src={obj.imgurl} alt="url" />
       <h3 className="pt-5 pb-3">AMRIN</h3>
       <p>React, tailwind</p>
-      <button>View page</button>
+      <a href={obj.link}>View link</a>
     </div>
   );
 };
