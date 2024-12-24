@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="h-[calc(100vh-100px)] flex flex-col justify-center items-center">
       <h1 className="text-[100px] uppercase ff_bebas text-center">
         hi, <br />i am robert garcia
       </h1>
