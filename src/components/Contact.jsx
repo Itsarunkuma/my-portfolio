@@ -37,15 +37,23 @@ const Contact = () => {
               <a href="">resume</a>
             </p>
             <div className="flex gap-4 mt-5">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/neha-rai-305155257/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <LinkedIn />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/Itsarunkuma"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Github />
               </a>
-              <a href="">
+              {/* <a href="" rel="noreferrer">
                 <Insta />
-              </a>
+              </a> */}
             </div>
           </div>
           <form className="w-full max-w-[600px]" onSubmit={onSubmitHandler}>
