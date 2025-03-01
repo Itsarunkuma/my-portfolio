@@ -1,4 +1,5 @@
 import React from "react";
+import resume from "../assets/img/Neha_rai_resume.pdf";
 
 const AboutUs = () => {
   return (
@@ -13,19 +14,28 @@ const AboutUs = () => {
           </h2>
           <div className="w-full">
             <h4 className="text-[32px] mb-5">
-              I am a front-end developer based in Sydney. Has Mechanical
-              Engineering background.
+              I am a passionate front-end developer with experience of 4 years.
             </h4>
             <p className="mb-5">
-              I am a front-end developer based in Sydney looking for exciting
-              opportunities. Has Mechanical Engineering background. Likes to
-              focus on accessibility when developing. Passionate and curious
-              about solving problems. Currently, I’m exploring Reactjs, Webflow
-              and a bit of Designing. While I am not programming, I enjoy
-              playing football, photography and playing Valorant. Learning more
-              to improve skill.
+              I am a passionate front-end developer with expertise in ReactJS,
+              Next.js, Vue.js, HTML, CSS, and Tailwind CSS. With a strong eye
+              for design and performance, I craft intuitive and responsive web
+              applications that enhance user experience. As the leader of
+              Radialcode, I guide a team of talented developers, fostering
+              innovation and collaboration. I also enjoy teaching HTML & CSS,
+              helping aspiring developers build a solid foundation. My focus is
+              on creating clean, maintainable code while optimizing for
+              performance and scalability. Constantly learning and evolving, I
+              stay updated with the latest trends in front-end development.
+              Let's build something amazing together!"
             </p>
-            <a href="">More about me</a>
+            <a
+              className="text-black uppercase rounded-full bg-[#D3E97A] px-6 transition-all duration-300 ease-in-out hover:text-[#D3E97A] hover:bg-transparent border border-[#D3E97A] py-3 font-semibold mt-5 inline-block "
+              href={resume}
+              download={resume}
+            >
+              More info
+            </a>
           </div>
         </div>
       </div>

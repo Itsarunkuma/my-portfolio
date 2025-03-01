@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Github, Insta, LinkedIn } from "./common/Icons";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import resume from "../assets/img/Neha_rai_resume.pdf";
 emailjs.init("Favu_M3WNoYx1DWsg");
 const Contact = () => {
   const initialState = {
@@ -30,11 +31,23 @@ const Contact = () => {
             <h2 className="text-[76px] uppercase ff_bebas ">Let’s connect</h2>
             <p>
               Say hello at
-              <a href="">robertgarcia@gmail.com</a>
+              <a
+                href="mailto:neharadialcode@gmail.com"
+                className="hover:text-[#D3E97A] hover:underline"
+              >
+                {" "}
+                neharadialcode@gmail.com
+              </a>
             </p>
             <p>
-              For more info, here’s my
-              <a href="">resume</a>
+              For more info, here’s my&nbsp;
+              <a
+                className="text-[#D3E97A] font-bold hover:underline"
+                href={resume}
+                download={resume}
+              >
+                resume
+              </a>
             </p>
             <div className="flex gap-4 mt-5">
               <a
